@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+<script>
+	function changeFn(){
+		var city  = document.getElementById("city");
+		var value = (city.options[city.selectedIndex].value);
+		alert("value = "+value);
+		
+		/* 		
+		var selectedindex = city.selectedIndex;
+		alert("value = "+value+" , selectedindex = "+selectedindex); 
+		*/
+	};
+</script>
+</head>
+<body>
+	<select  name='cityasd'id="city"  onchange="changeFn()">
+		<option  value="seoul">서울</option>
+		<option selected  value="busan">부산</option>
+		<option value="jeju">제주</option>
+	</select>
+
+</body>
+</html>

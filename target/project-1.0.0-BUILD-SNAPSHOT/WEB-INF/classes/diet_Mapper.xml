@@ -1,0 +1,1643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lee.project.Diet.Diet_Mapper">
+
+
+
+
+	<select id="getDiet_Recipe_Popular1"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn <=25 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_Popular2"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 26 and 50 ]]>
+	</select>
+
+
+	<select id="getDiet_Recipe_Popular3"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 51 and 75 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_Popular4"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 76 and 100 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_Popular5"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 101 and 125 ]]>
+	</select>
+
+	<!--5페이지 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<select id="getDiet_Recipe_Popular6"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 126 and 150 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_Popular7"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 151 and 175 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_Popular8"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 176 and 200 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_Popular9"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 201 and 225 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_Popular10"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 226 and 250 ]]>
+	</select>
+
+	<!-- 10페이지 -->
+
+
+
+
+
+
+
+
+
+
+
+
+	<select id="getDiet_Recipe_Popular11"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 251 and 275 ]]>
+	</select>
+
+
+	<select id="getDiet_Recipe_Popular12"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 276 and 300 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_Popular13"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 301 and 325 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_Popular14"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 326 and 350 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_Popular15"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 351 and 375 ]]>
+	</select>
+
+	<!-- 15페이지 -->
+
+
+
+
+	<select id="getDiet_Recipe_level"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		<choose>
+			<when test='m_level.equals("아무나")'>
+				select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||#{m_level}||'%'
+		order by m_view desc
+		)
+		)
+		<![CDATA[ where rn <=25 ]]>
+			</when>
+			
+		
+	   <when test='m_level.equals("초급")'>
+	    select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||#{m_level}||'%'
+		order by m_view desc
+		)
+		)
+		<![CDATA[ where rn <=25 ]]>
+			</when>
+
+
+	   <when test='m_level.equals("중급")'>
+	    select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||#{m_level}||'%'
+		order by m_view desc
+		)
+		)
+		<![CDATA[ where rn <=25 ]]>
+			</when>
+		</choose>
+	</select>
+
+
+	<!-- 레벨에 따른 페이지 -->
+
+
+
+	<select id="getDiet_Recipe_level1"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn <=25 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_level2"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 26 and 50 ]]>
+	</select>
+
+
+	<select id="getDiet_Recipe_level3"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 51 and 75 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_level4"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 76 and 100 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_level5"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 101 and 125 ]]>
+	</select>
+
+	<!--level(1) 에서 번호별 페이지 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<select id="getDiet_Recipe_level6"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 126 and 150 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_level7"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 151 and 175 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_level8"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 176 and 200 ]]>
+	</select>
+
+
+
+	<!-- level(1) 에서 번호별 페이지 -->
+
+
+
+
+
+
+
+	<select id="getDiet_Recipe_level2_1"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn <=25 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_level2_2"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 26 and 50 ]]>
+	</select>
+
+
+	<select id="getDiet_Recipe_level2_3"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 51 and 75 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_level2_4"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 76 and 100 ]]>
+	</select>
+
+	<select id="getDiet_Recipe_level2_5"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)  
+     <![CDATA[ where rn between 101 and 125 ]]>
+	</select>
+
+	<!--level(2) 에서 번호별 페이지 -->
+
+
+
+
+
+
+
+
+
+
+
+
+	<select id="getDiet_Recipe_Mainimage"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from Diet_Recipe_main where m_url = #{m_url}
+	</select>
+
+	<select id="getDiet_Recipe_introduce" parameterType="String"
+		resultType="com.lee.project.Diet.Diet">
+		select * from Diet_Recipe_introduce where i_url = #{m_url}
+
+	</select>
+
+	<select id="getDiet_Recipe_ingredient"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from Diet_Recipe_ingredient where i_url1 = #{m_url}
+
+	</select>
+
+	<select id="getDiet_Recipe_seqence"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from Diet_Recipe_seqence where s_url = #{m_url} order by s_no asc
+	</select>
+
+
+
+
+
+	<!-- 디테일한 요리 설명 -->
+
+
+
+
+    <select id="getDiet_Recipe_Search_name_first"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main where m_name like '%'||#{m_name}||'%' order by m_view desc))
+		<![CDATA[ where rn <=25 ]]>
+	</select>
+     <!-- 딱 첫페이지에서 검색했을떄 -->
+     
+     
+     
+	<select id="getDiet_Recipe_Search_name"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main where m_name like '%'||#{m_name}||'%' order by m_view desc))
+		
+		<choose>
+		  <when test='pageNO.equals("1")'>
+        <![CDATA[ where rn <=25 ]]>
+            </when>
+            
+              <when test='pageNO.equals("2")'>
+        <![CDATA[ where rn between 26 and 50 ]]>
+            </when>
+            
+              <when test='pageNO.equals("3")'>
+        <![CDATA[ where rn between 51 and 75 ]]>
+            </when>
+            
+              <when test='pageNO.equals("4")'>
+        <![CDATA[ where rn between 76 and 100 ]]>
+            </when>
+            
+              <when test='pageNO.equals("5")'>
+        <![CDATA[ where rn between 101 and 125 ]]>
+            </when>
+        </choose>
+	</select>
+
+   <!-- 제목 검색했을경우 -->
+
+
+
+
+
+ <update id="UpdateDiet_Recipe_View" parameterType="com.lee.project.Diet.Diet" >
+   update Diet_Recipe_main set m_view = m_view + 1 where m_url =#{m_url}
+ </update>
+
+   <!-- 디테일한 설명 페이지 들어갈때마다 조회수 올리기  -->
+   
+   
+   <select id="getDiet_Recipe_TotalCount" parameterType="com.lee.project.Diet.Diet" resultType="int" >
+         select count(*) from Diet_Recipe_main where m_name like '%'||#{m_name}||'%'
+   </select>
+
+    <!-- 메인 페이지에서 검색했을경우 총 검색 결과수 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<select id="getDiet_Recipe_Foodall_1page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main  order by m_view desc))
+		
+	
+       <![CDATA[ where rn <=5 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지 -->
+ 
+ 
+ <select id="getDiet_Recipe_Foodall_6page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main  order by m_view desc))
+		
+	
+         <![CDATA[ where rn between 26 and 30 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 6번쨰 페이지 -->
+ 
+  <select id="getDiet_Recipe_Foodall_11page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main  order by m_view desc))
+		
+	
+           <![CDATA[ where rn between 51 and 55 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 11번쨰 페이지 -->
+ 
+  <select id="getDiet_Recipe_Foodall_16page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main  order by m_view desc))
+		
+	
+        <![CDATA[ where rn  between 76 and 80 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 16번쨰 페이지 -->
+ 
+ 
+  <select id="getDiet_Recipe_Foodall_21page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main  order by m_view desc))
+		
+	
+       <![CDATA[ where rn  between 101 and 105 ]]>
+ </select>
+
+ 
+  <select id="getDiet_Recipe_Foodall_26page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main  order by m_view desc))
+		
+	
+         <![CDATA[ where rn  between 126 and 130 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 26번쨰 페이지 -->
+ 
+  <select id="getDiet_Recipe_Foodall_31page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main  order by m_view desc))
+		
+	
+          <![CDATA[ where rn  between 151 and 155 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 31번쨰 페이지 -->
+ 
+  <select id="getDiet_Recipe_Foodall_36page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main  order by m_view desc))
+		
+	
+         <![CDATA[ where rn between 176 and 180 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 36번쨰 페이지 -->
+ 
+  <select id="getDiet_Recipe_Foodall_41page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main  order by m_view desc))
+		
+	
+          <![CDATA[ where rn  between 201 and 205 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 41번쨰 페이지 -->
+ 
+  <select id="getDiet_Recipe_Foodall_46page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main  order by m_view desc))
+		
+	
+         <![CDATA[ where rn  between 226 and 230 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 46번쨰 페이지 -->
+ 
+  <select id="getDiet_Recipe_Foodall_51page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main  order by m_view desc))
+		
+
+          <![CDATA[ where rn  between 251 and 255 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 51번쨰 페이지 -->
+ 
+  <select id="getDiet_Recipe_Foodall_56page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main  order by m_view desc))
+		
+	
+        <![CDATA[ where rn  between 276 and 280 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 56번쨰 페이지 -->
+
+
+
+
+
+
+
+<select id="getDiet_Recipe_Foodall"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main  order by m_view desc))
+		
+		<choose>
+		
+	
+		
+		  <when test='pageNO.equals("1")'>
+        <![CDATA[ where rn <=5 ]]>
+            </when>
+            
+              <when test='pageNO.equals("2")'>
+        <![CDATA[ where rn between 6 and 10 ]]>
+            </when>
+            
+              <when test='pageNO.equals("3")'>
+        <![CDATA[ where rn between 11 and 15 ]]>
+            </when>
+            
+              <when test='pageNO.equals("4")'>
+        <![CDATA[ where rn between 16 and 20 ]]>
+            </when>
+            
+              <when test='pageNO.equals("5")'>
+        <![CDATA[ where rn between 21 and 25 ]]>
+            </when>
+            
+            <when test='pageNO.equals("6")'>
+        <![CDATA[ where rn between 26 and 33 ]]>
+            </when>
+            
+            <when test='pageNO.equals("7")'>
+        <![CDATA[ where rn between 33 and 35 ]]>
+            </when>
+            
+            <when test='pageNO.equals("8")'>
+        <![CDATA[ where rn between 36 and 40 ]]>
+            </when>
+            
+            <when test='pageNO.equals("9")'>
+        <![CDATA[ where rn between 41 and 45 ]]>
+            </when>
+            
+            <when test='pageNO.equals("10")'>
+        <![CDATA[ where rn between 46 and 50 ]]>
+            </when>
+            
+            <when test='pageNO.equals("11")'>
+        <![CDATA[ where rn between 51 and 55 ]]>
+            </when>
+            
+            <when test='pageNO.equals("12")'>
+        <![CDATA[ where rn between 56 and 60 ]]>
+            </when>
+            
+            <when test='pageNO.equals("13")'>
+        <![CDATA[ where rn between 61 and 65 ]]>
+            </when>
+            
+            <when test='pageNO.equals("14")'>
+        <![CDATA[ where rn between 66 and 70 ]]>
+            </when>
+            
+            <when test='pageNO.equals("15")'>
+        <![CDATA[ where rn between 71 and 75 ]]>
+            </when>
+            
+            
+            
+            
+            
+            <when test='pageNO.equals("16")'>
+        <![CDATA[ where rn < between 76 and 80 ]]>
+            </when>
+            
+              <when test='pageNO.equals("17")'>
+        <![CDATA[ where rn between 81 and 85 ]]>
+            </when>
+            
+              <when test='pageNO.equals("18")'>
+        <![CDATA[ where rn between 86 and 90 ]]>
+            </when>
+            
+              <when test='pageNO.equals("19")'>
+        <![CDATA[ where rn between 91 and 95 ]]>
+            </when>
+            
+              <when test='pageNO.equals("20")'>
+        <![CDATA[ where rn between 96 and 100 ]]>
+            </when>
+            
+            <when test='pageNO.equals("21")'>
+        <![CDATA[ where rn between 101 and 105 ]]>
+            </when>
+            
+            <when test='pageNO.equals("22")'>
+        <![CDATA[ where rn between 106 and 110 ]]>
+            </when>
+            
+            <when test='pageNO.equals("23")'>
+        <![CDATA[ where rn between 111 and 115 ]]>
+            </when>
+            
+            <when test='pageNO.equals("24")'>
+        <![CDATA[ where rn between 116 and 120 ]]>
+            </when>
+            
+            <when test='pageNO.equals("25")'>
+        <![CDATA[ where rn between 121 and 125 ]]>
+            </when>
+            
+            <when test='pageNO.equals("26")'>
+        <![CDATA[ where rn between 126 and 130 ]]>
+            </when>
+            
+            <when test='pageNO.equals("27")'>
+        <![CDATA[ where rn between 131 and 135 ]]>
+            </when>
+            
+            <when test='pageNO.equals("28")'>
+        <![CDATA[ where rn between 136 and 140 ]]>
+            </when>
+            
+            <when test='pageNO.equals("29")'>
+        <![CDATA[ where rn between 141 and 145 ]]>
+            </when>
+            
+            <when test='pageNO.equals("33")'>
+        <![CDATA[ where rn between 146 and 150 ]]>
+            </when>
+            
+            
+            
+            
+            
+            
+            <when test='pageNO.equals("33")'>
+        <![CDATA[ where rn between 151 and 155 ]]>
+            </when>
+            
+              <when test='pageNO.equals("33")'>
+        <![CDATA[ where rn between 156 and 160 ]]>
+            </when>
+            
+              <when test='pageNO.equals("33")'>
+        <![CDATA[ where rn between 161 and 165 ]]>
+            </when>
+            
+            <when test='pageNO.equals("34")'>
+        <![CDATA[ where rn between 166 and 170 ]]>
+            </when>
+            
+              <when test='pageNO.equals("35")'>
+        <![CDATA[ where rn between 171 and 175 ]]>
+            </when>
+            
+              <when test='pageNO.equals("36")'>
+        <![CDATA[ where rn between 176 and 180 ]]>
+            </when>
+            
+            <when test='pageNO.equals("37")'>
+        <![CDATA[ where rn between 181 and 185 ]]>
+            </when>
+            
+            <when test='pageNO.equals("38")'>
+        <![CDATA[ where rn between 186 and 190 ]]>
+            </when>
+            
+            <when test='pageNO.equals("39")'>
+        <![CDATA[ where rn between 191 and 195 ]]>
+            </when>
+            
+            <when test='pageNO.equals("40")'>
+        <![CDATA[ where rn between 196 and 200 ]]>
+            </when>
+            
+            <when test='pageNO.equals("41")'>
+        <![CDATA[ where rn between 201 and 205 ]]>
+            </when>
+            
+            <when test='pageNO.equals("42")'>
+        <![CDATA[ where rn between 206 and 210 ]]>
+            </when>
+            
+            <when test='pageNO.equals("43")'>
+        <![CDATA[ where rn between 211 and 215 ]]>
+            </when>
+            
+            <when test='pageNO.equals("44")'>
+        <![CDATA[ where rn between 216 and 220 ]]>
+            </when>
+            
+            <when test='pageNO.equals("45")'>
+        <![CDATA[ where rn between 221 and 225 ]]>
+            </when>
+            
+            <when test='pageNO.equals("46")'>
+        <![CDATA[ where rn between 226 and 230 ]]>
+            </when>
+        
+            
+            
+            
+            
+            
+            <when test='pageNO.equals("47")'>
+        <![CDATA[ where rn between 231 and 235 ]]>
+            </when>
+            
+              <when test='pageNO.equals("48")'>
+        <![CDATA[ where rn between 235 and 240 ]]>
+            </when>
+            
+              <when test='pageNO.equals("49")'>
+        <![CDATA[ where rn between 241 and 245 ]]>
+            </when>
+            
+              <when test='pageNO.equals("50")'>
+        <![CDATA[ where rn between 246 and 250 ]]>
+            </when>
+            
+              <when test='pageNO.equals("51")'>
+        <![CDATA[ where rn between 251 and 255 ]]>
+            </when>
+            
+            <when test='pageNO.equals("52")'>
+        <![CDATA[ where rn between 256 and 260 ]]>
+            </when>
+            
+            <when test='pageNO.equals("53")'>
+        <![CDATA[ where rn between 261 and 265 ]]>
+            </when>
+            
+            <when test='pageNO.equals("54")'>
+        <![CDATA[ where rn between 266 and 270 ]]>
+            </when>
+            
+            <when test='pageNO.equals("55")'>
+        <![CDATA[ where rn between 271 and 275 ]]>
+            </when>
+            
+            <when test='pageNO.equals("56")'>
+        <![CDATA[ where rn between 276 and 280 ]]>
+            </when>
+            
+            <when test='pageNO.equals("57")'>
+        <![CDATA[ where rn between 281 and 285 ]]>
+            </when>
+            
+            <when test='pageNO.equals("58")'>
+        <![CDATA[ where rn between 286 and 290 ]]>
+            </when>
+            
+            <when test='pageNO.equals("59")'>
+        <![CDATA[ where rn between 291 and 295 ]]>
+            </when>
+            
+            <when test='pageNO.equals("60")'>
+        <![CDATA[ where rn between 296 and 300 ]]>
+            </when>
+            
+
+            
+        </choose>
+	</select>
+
+<!-- 전체를 클릭하고 food all 했을경우 -->
+
+
+
+
+
+
+  <select id="getDiet_Recipe_Foodall_foodlevel1_1page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'아무나'||'%'
+		order by m_view desc
+		)
+		)
+		
+	
+        <![CDATA[ where rn  between 0 and 5 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 56번쨰 페이지 -->
+ 
+ 
+   <select id="getDiet_Recipe_Foodall_foodlevel1_6page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'아무나'||'%'
+		order by m_view desc
+		)
+		)
+		
+	
+        <![CDATA[ where rn  between 6 and 10 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 1번쨰 페이지 -->
+ 
+ 
+ 
+   <select id="getDiet_Recipe_Foodall_foodlevel1_11page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+	    select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'아무나'||'%'
+		order by m_view desc
+		)
+		)
+		
+	
+        <![CDATA[ where rn  between 11 and 15 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 6번쨰 페이지 -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+<select id="getDiet_Recipe_Foodlevel1"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'아무나'||'%'
+		order by m_view desc
+		)
+		)
+		<choose>
+	
+              
+		  <when test='pageNO.equals("1")'>
+        <![CDATA[ where rn <=5 ]]>
+            </when>
+            
+              <when test='pageNO.equals("2")'>
+        <![CDATA[ where rn between 6 and 10 ]]>
+            </when>
+            
+              <when test='pageNO.equals("3")'>
+        <![CDATA[ where rn between 11 and 15 ]]>
+            </when>
+            
+              <when test='pageNO.equals("4")'>
+        <![CDATA[ where rn between 16 and 20 ]]>
+            </when>
+            
+              <when test='pageNO.equals("5")'>
+        <![CDATA[ where rn between 21 and 25 ]]>
+            </when>
+            
+            <when test='pageNO.equals("6")'>
+        <![CDATA[ where rn between 26 and 30 ]]>
+            </when>
+            
+            <when test='pageNO.equals("7")'>
+        <![CDATA[ where rn between 31 and 35 ]]>
+            </when>
+            
+            <when test='pageNO.equals("8")'>
+        <![CDATA[ where rn between 36 and 40 ]]>
+            </when>
+            
+            <when test='pageNO.equals("9")'>
+        <![CDATA[ where rn between 41 and 45 ]]>
+            </when>
+            
+            <when test='pageNO.equals("10")'>
+        <![CDATA[ where rn between 46 and 50 ]]>
+            </when>
+            
+            <when test='pageNO.equals("11")'>
+        <![CDATA[ where rn between 51 and 55 ]]>
+            </when>
+            
+            <when test='pageNO.equals("12")'>
+        <![CDATA[ where rn between 56 and 60 ]]>
+            </when>
+            
+            <when test='pageNO.equals("13")'>
+        <![CDATA[ where rn between 61 and 65 ]]>
+            </when>
+            
+            <when test='pageNO.equals("14")'>
+        <![CDATA[ where rn between 66 and 70 ]]>
+            </when>
+            
+            <when test='pageNO.equals("15")'>
+        <![CDATA[ where rn between 71 and 75 ]]>
+            </when>
+
+
+            
+        </choose>
+	</select>
+
+<!-- 전체를 클릭하고 food level(1) 했을경우 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <select id="getDiet_Recipe_Foodall_foodlevel2_1page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)
+		
+	
+        <![CDATA[ where rn  between 0 and 5 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 56번쨰 페이지 -->
+ 
+ 
+   <select id="getDiet_Recipe_Foodall_foodlevel2_6page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)
+		
+	
+        <![CDATA[ where rn  between 6 and 10 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 1번쨰 페이지 -->
+ 
+ 
+ 
+   <select id="getDiet_Recipe_Foodall_foodlevel2_11page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+	    select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)
+		
+	
+        <![CDATA[ where rn  between 11 and 15 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 6번쨰 페이지 -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+<select id="getDiet_Recipe_Foodlevel2"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'초급'||'%'
+		order by m_view desc
+		)
+		)
+		<choose>
+	
+              
+		  <when test='pageNO.equals("1")'>
+        <![CDATA[ where rn <=5 ]]>
+            </when>
+            
+              <when test='pageNO.equals("2")'>
+        <![CDATA[ where rn between 6 and 10 ]]>
+            </when>
+            
+              <when test='pageNO.equals("3")'>
+        <![CDATA[ where rn between 11 and 15 ]]>
+            </when>
+            
+              <when test='pageNO.equals("4")'>
+        <![CDATA[ where rn between 16 and 20 ]]>
+            </when>
+            
+              <when test='pageNO.equals("5")'>
+        <![CDATA[ where rn between 21 and 25 ]]>
+            </when>
+            
+            <when test='pageNO.equals("6")'>
+        <![CDATA[ where rn between 26 and 30 ]]>
+            </when>
+            
+            <when test='pageNO.equals("7")'>
+        <![CDATA[ where rn between 31 and 35 ]]>
+            </when>
+            
+            <when test='pageNO.equals("8")'>
+        <![CDATA[ where rn between 36 and 40 ]]>
+            </when>
+            
+            <when test='pageNO.equals("9")'>
+        <![CDATA[ where rn between 41 and 45 ]]>
+            </when>
+            
+            <when test='pageNO.equals("10")'>
+        <![CDATA[ where rn between 46 and 50 ]]>
+            </when>
+            
+            <when test='pageNO.equals("11")'>
+        <![CDATA[ where rn between 51 and 55 ]]>
+            </when>
+            
+            <when test='pageNO.equals("12")'>
+        <![CDATA[ where rn between 56 and 60 ]]>
+            </when>
+            
+            <when test='pageNO.equals("13")'>
+        <![CDATA[ where rn between 61 and 65 ]]>
+            </when>
+            
+            <when test='pageNO.equals("14")'>
+        <![CDATA[ where rn between 66 and 70 ]]>
+            </when>
+            
+            <when test='pageNO.equals("15")'>
+        <![CDATA[ where rn between 71 and 75 ]]>
+            </when>
+
+
+            
+        </choose>
+	</select>
+
+<!-- 전체를 클릭하고 food level(1) 했을경우 -->
+
+
+
+
+
+
+
+
+	  <select id="getDiet_Recipe_Foodall_foodlevel3_1page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'중급'||'%'
+		order by m_view desc
+		)
+		)
+		
+	
+        <![CDATA[ where rn  between 0 and 8 ]]>
+ </select>
+ <!-- 메인 페이지에서 전체검색했을떄 보여줄 첫페이지에서 >> 클릭시 보여줄 1번쨰 페이지 -->
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<select id="getDiet_Recipe_Foodlevel3"
+		resultType="com.lee.project.Diet.Diet">
+		select *
+		from(
+		select rownum rn ,m_name,m_img_url,m_view,m_url
+		from(
+		select *
+		from Diet_Recipe_main
+		where m_level like '%'||'중급'||'%'
+		order by m_view desc
+		)
+		)
+
+		<choose>
+	
+              
+		  <when test='pageNO.equals("1")'>
+        <![CDATA[ where rn <=8 ]]>
+            </when>
+            
+              <when test='pageNO.equals("2")'>
+        <![CDATA[ where rn between 9 and 18 ]]>
+            </when>
+            
+              <when test='pageNO.equals("3")'>
+        <![CDATA[ where rn between 19 and 28 ]]>
+            </when>
+            
+              <when test='pageNO.equals("4")'>
+        <![CDATA[ where rn between 29 and 30 ]]>
+            </when>
+            
+              <when test='pageNO.equals("5")'>
+        <![CDATA[ where rn between 31 and 38 ]]>
+            </when>
+            
+
+   
+
+            
+        </choose>
+	</select>
+
+<!-- 전체 음식중에서 food level(3) 을 검색한경우 번호별페이지 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <select id="getDiet_Recipe_all_Search_name_1page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main where m_name like '%'||#{m_name}||'%' order by m_view desc))
+		
+		  <![CDATA[ where rn between 0 and 5 ]]>
+	</select>
+     <!-- 딱 첫페이지에서 전체 중에 검색했을떄 1번쨰 페이지-->
+     
+       <select id="getDiet_Recipe_all_Search_name_6page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main where m_name like '%'||#{m_name}||'%' order by m_view desc))
+		
+		  <![CDATA[ where rn between 26 and 30 ]]>
+	</select>
+     <!-- 딱 첫페이지에서 전체 중에 검색했을떄 1번쨰 페이지-->
+     
+       <select id="getDiet_Recipe_all_Search_name_11page"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main where m_name like '%'||#{m_name}||'%' order by m_view desc))
+		
+		  <![CDATA[ where rn between 51 and 55 ]]>
+	</select>
+     <!-- 딱 첫페이지에서 전체 중에 검색했을떄 1번쨰 페이지-->
+     
+     
+       <select id="getDiet_Recipe_all_Search_name_Count"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="int">
+	
+		select  count(*) from  Diet_Recipe_main where m_name like '%'||#{m_name}||'%' 
+	</select>
+     <!-- 딱 첫페이지에서 전체 중에 검색했을떄 몇개 나오는지 세기 위해-->
+     
+     
+     
+     
+     
+	<select id="getDiet_Recipe_all_Search_name"
+		parameterType="com.lee.project.Diet.Diet"
+		resultType="com.lee.project.Diet.Diet">
+		select * from (
+		select rownum rn,m_name,m_img_url,m_view,m_url from (
+		select * from Diet_Recipe_main where m_name like '%'||#{m_name}||'%' order by m_view desc))
+		
+		<choose>
+		  <when test='pageNO.equals("1")'>
+        <![CDATA[ where rn between 0 and 5 ]]>
+            </when>
+            
+              <when test='pageNO.equals("2")'>
+        <![CDATA[ where rn between 6 and 10  ]]>
+            </when>
+            
+              <when test='pageNO.equals("3")'>
+      <![CDATA[ where rn between 11 and 15  ]]>
+            </when>
+            
+              <when test='pageNO.equals("4")'>
+      <![CDATA[ where rn between 16 and 20  ]]>
+            </when>
+            
+              <when test='pageNO.equals("5")'>
+      <![CDATA[ where rn between 21 and 25  ]]>
+            </when>
+              <when test='pageNO.equals("6")'>
+      <![CDATA[ where rn between 26 and 30  ]]>
+            </when>
+              <when test='pageNO.equals("7")'>
+      <![CDATA[ where rn between 31 and 35  ]]>
+            </when>
+              <when test='pageNO.equals("8")'>
+      <![CDATA[ where rn between 36 and 40 ]]>
+            </when>
+              <when test='pageNO.equals("9")'>
+      <![CDATA[ where rn between 41 and 45  ]]>
+            </when>
+              <when test='pageNO.equals("10")'>
+      <![CDATA[ where rn between 46 and 50  ]]>
+            </when>
+        </choose>
+	</select>
+
+   <!-- 전체 중에 제목 검색했을경우 번호별 페이지 -->
+
+
+
+
+
+
+</mapper>

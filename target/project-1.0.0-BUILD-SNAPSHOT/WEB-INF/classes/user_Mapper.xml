@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lee.project.User.User_Mapper">
+
+
+	<select id="Login_User"
+		parameterType="com.lee.project.User.User"
+		resultType="com.lee.project.User.User">
+		select * from Login_User where u_name = #{u_name} and u_password = #{u_password}
+	</select>
+
+	<insert id="join_User" parameterType="com.lee.project.User.User">
+		insert into Login_User
+		values(#{u_name},#{u_password},#{u_email})
+	</insert>
+
+
+	<insert id="book_Mark" parameterType="com.lee.project.User.User">
+		insert into User_Favorite
+		values(User_Favorite_seqence.nextval,#{u_name},#{u_m_name},#{u_m_img_url},#{u_m_view},#{u_m_url})
+	</insert>
+
+	<select id="book_Mark_Page"
+		parameterType="com.lee.project.User.User"
+		resultType="com.lee.project.User.User">
+		select * from (
+		select rownum rn
+		,u_no,u_name,u_m_name,u_m_img_url,u_m_view,u_m_url from (
+		select * from
+		User_Favorite where u_name = #{u_name} order by u_no desc))
+		<![CDATA[ where rn <=25 ]]>
+	</select>
+	
+	<select id="book_Mark_Page_number"
+		parameterType="com.lee.project.User.User"
+		resultType="com.lee.project.User.User">
+		select * from (
+		select rownum rn
+		,u_no,u_name,u_m_name,u_m_img_url,u_m_view,u_m_url from (
+		select * from
+		User_Favorite where u_name = #{u_name} order by u_no desc))
+		
+			<choose>
+
+			<when test='pageNO.equals("1")'>
+        <![CDATA[ where rn <=25 ]]>
+			</when>
+
+			<when test='pageNO.equals("2")'>
+        <![CDATA[ where rn between 26 and 50 ]]>
+			</when>
+			
+			<when test='pageNO.equals("3")'>
+        <![CDATA[ where rn between 51 and 75 ]]>
+			</when>
+
+			<when test='pageNO.equals("4")'>
+        <![CDATA[ where rn between 76 and 100 ]]>
+			</when>
+
+			<when test='pageNO.equals("5")'>
+        <![CDATA[ where rn between 101 and 125 ]]>
+			</when>
+
+
+		</choose>
+	</select>
+
+	<select id="book_Mark_Count"
+		parameterType="com.lee.project.User.User" resultType="int">
+		select count(*)
+		from User_Favorite where u_name = #{u_name}
+	</select>
+
+	<delete id="delete_book_mark"
+		parameterType="com.lee.project.User.User">
+		DELETE FROM User_Favorite where u_m_url = #{u_m_url}
+	</delete>
+
+
+
+
+
+	<insert id="search_history"
+		parameterType="com.lee.project.User.User">
+		insert into User_search_history
+		values(User_search_history_seqence.nextval,#{u_name},#{u_m_name},#{u_m_img_url},#{u_m_view},#{u_m_url})
+	</insert>
+
+
+
+
+
+	<select id="search_history_Count"
+		parameterType="com.lee.project.User.User" resultType="int">
+		select count(*)
+		from User_search_history where u_name = #{u_name}
+	</select>
+
+	<delete id="delete_search_history"
+		parameterType="com.lee.project.User.User">
+		DELETE FROM User_search_history where u_m_url =
+		#{u_m_url}
+	</delete>
+
+
+	<delete id="delete_all_search_history"
+		parameterType="com.lee.project.User.User">
+		DELETE FROM User_search_history where u_name = #{u_name}
+	</delete>
+
+
+
+	<select id="search_history_Page"
+		parameterType="com.lee.project.User.User" resultType="com.lee.project.User.User">
+		select * from (
+		select rownum rn ,u_no,u_name,u_m_name,u_m_img_url,u_m_view,u_m_url from (
+		select * from
+		User_search_history where u_name = #{u_name} order by u_no desc))
+		<![CDATA[ where rn <=25 ]]>
+	</select>
+	
+	
+	
+	
+	<select id="search_history_Page_number"
+		parameterType="com.lee.project.User.User" resultType="com.lee.project.User.User">
+		select * from (
+		select rownum rn
+		,u_no,u_name,u_m_name,u_m_img_url,u_m_view,u_m_url from (
+		select * from
+		User_search_history where u_name = #{u_name} order by u_no desc))
+
+		<choose>
+
+			<when test='pageNO.equals("1")'>
+        <![CDATA[ where rn <=25 ]]>
+			</when>
+
+			<when test='pageNO.equals("2")'>
+        <![CDATA[ where rn between 26 and 50 ]]>
+			</when>
+			
+			<when test='pageNO.equals("3")'>
+        <![CDATA[ where rn between 51 and 75 ]]>
+			</when>
+
+			<when test='pageNO.equals("4")'>
+        <![CDATA[ where rn between 76 and 100 ]]>
+			</when>
+
+			<when test='pageNO.equals("5")'>
+        <![CDATA[ where rn between 101 and 125 ]]>
+			</when>
+
+
+		</choose>
+
+	</select>
+	
+	
+	
+      <select id="Find_ID"
+		parameterType="com.lee.project.User.User" resultType="String">
+            select u_name from Login_User where u_password = #{u_password} and u_email = #{u_email} 
+	  </select>
+      <select id="Find_Password"
+		parameterType="com.lee.project.User.User" resultType="String">
+            select u_password from Login_User where u_name = #{u_name} 
+	  </select>
+	  
+	  
+      <select id="Login_Manager"
+		parameterType="com.lee.project.User.User" resultType="String">
+            select m_name from Login_Manager where m_name = #{m_name} 
+	  </select>
+
+
+</mapper>

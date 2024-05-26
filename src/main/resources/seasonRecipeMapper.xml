@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.lee.project.Season.Season_Mapper">
+	<select id="getRecipesBySeason"
+		resultType="com.lee.project.Season.Season">
+		<!-- SELECT * FROM Season_Recipe_main WHERE season = #{season} -->
+		select * from (
+		SELECT *
+		FROM Season_Recipe_main
+		INNER JOIN
+		Season_Recipe_introduce
+		ON Season_Recipe_main.m_url =
+		Season_Recipe_introduce.i_url
+		where season = '겨울'
+		order by
+		DBMS_RANDOM.VALUE)
+		<![CDATA[ where rownum < 7 ]]>
+	</select>
+	<!-- <select id="getRecipeById" resultType="com.lee.project.Season.Season"> 
+		SELECT * FROM Season_Recipe_main WHERE id = #{id} </select> -->
+
+
+
+	<select id="getSeason_Recipe_Mainimage"
+		parameterType="com.lee.project.Season.Season"
+		resultType="com.lee.project.Season.Season">
+		select * from Season_Recipe_main where m_url = #{m_url}
+	</select>
+
+	<select id="getSeason_Recipe_introduce" parameterType="com.lee.project.Season.Season"
+		resultType="com.lee.project.Season.Season">
+		select * from Season_Recipe_introduce where i_url =
+		#{m_url}
+
+	</select>
+
+	<select id="getSeason_Recipe_ingredient"
+		parameterType="com.lee.project.Season.Season"
+		resultType="com.lee.project.Season.Season">
+		select * from Season_Recipe_ingredient where i_url1 =
+		#{m_url}
+
+	</select>
+
+	<select id="getSeason_Recipe_seqence"
+		parameterType="com.lee.project.Season.Season"
+		resultType="com.lee.project.Season.Season">
+		select * from Season_Recipe_seqence where s_url = #{m_url}
+		order by s_no asc
+	</select>
+
+
+	<update id="UpdateSeason_Recipe_View"
+		parameterType="com.lee.project.Season.Season">
+		update Season_Recipe_main set m_view = m_view + 1 where m_url =#{m_url}
+	</update>
+
+	<!-- 디테일한 설명 페이지 들어갈때마다 조회수 올리기 -->
+
+
+
+</mapper>
